@@ -4,14 +4,14 @@
 ### *I will code for at least an hour every day for the next 100 days.*
 
 #### Start Date
-June 25th, 2016. [PUT YOUR DATE HERE]
+January 1st, 2021
 
 ## Additional Rules
-1. I will tweet about my progress every day -> using the hashtag #100DaysOfCode
+1. I will share my progress every 7 days (or week) on LinkedIn & Instagram, using the hashtag #100DaysOfCode and tagging <https://github.com/sudo-von>, <https://github.com/kberlanga>, <https://github.com/Dllanes/> and <https://github.com/guadalupejaime/>.
 2. If I code at work, that time won't count towards the challenge.
 3. I will push code to GitHub every day so that anyone can see my progress.
-4. I will update the (Log)[log.md] with the day's progress and provide a link so that others can see my progress.
-5. I will work on real projects, facing real challenges. The time spent doing tutorials, online courses and other similar resources will NOT count towards this challenge. (If you've just started learning to code, read [FAQ](FAQ.md))
+4. I will update the spreadsheet with the day's progress and provide a link so that others can see my progress.
+5. I will work on real projects, facing real challenges, but I can also work on tutorials, books, courses, programming challenges and every other thing that makes me code.
 
 
 ## Ideas to make this challenge more effective
