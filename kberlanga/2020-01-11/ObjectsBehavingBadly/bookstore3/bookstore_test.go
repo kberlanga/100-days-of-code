@@ -1,6 +1,8 @@
 package bookstore3
 
-import "testing"
+import (
+	"testing"
+)
 
 func TestBook_NetPrice(t *testing.T) {
 	type fields struct {
@@ -40,6 +42,49 @@ func TestBook_NetPrice(t *testing.T) {
 			}
 			if got := b.NetPrice(); got != tt.want {
 				t.Errorf("Book.NetPrice() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}
+
+func TestSalePriceCents(t *testing.T) {
+	b := Book{
+		Title:      "A Clockwork Orange Soda",
+		PriceCents: 500,
+	}
+	want := 250
+	got := b.SalePriceCents()
+	if want != got {
+		t.Errorf("want %d, got %d", want, got)
+	}
+}
+
+func TestCustomer_MailingLabel(t *testing.T) {
+	type fields struct {
+		Title   string
+		Name    string
+		Address string
+	}
+	tests := []struct {
+		name   string
+		fields fields
+		want   string
+	}{
+		{
+			name:   "Normal customer",
+			fields: fields{Title: "Internal Intranet Supervisor", Name: "Anita Jenkins", Address: "460 Barton Flats"},
+			want:   "Customer: Internal Intranet Supervisor\nName: Anita Jenkins\nAddress: 460 Barton Flats",
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			b := &Customer{
+				Title:   tt.fields.Title,
+				Name:    tt.fields.Name,
+				Address: tt.fields.Address,
+			}
+			if got := b.MailingLabel(); got != tt.want {
+				t.Errorf("Customer.MailingLabel() = %v, want %v", got, tt.want)
 			}
 		})
 	}
